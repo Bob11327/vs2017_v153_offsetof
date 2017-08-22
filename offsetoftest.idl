@@ -1,0 +1,36 @@
+// offsetoftest.idl : IDL source for offsetoftest
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (offsetoftest.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(5d580ac5-3176-4687-ae7a-e9632180999a),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ISimpleObject : IDispatch
+{
+};
+[
+	uuid(e2e12e05-0d23-4ef9-b658-495491f122f9),
+	version(1.0),
+]
+library offsetoftestLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(a178e81c-f3c0-43b4-ba47-18a2aa78ba81)
+	]
+	coclass SimpleObject
+	{
+		[default] interface ISimpleObject;
+	};
+};
+
+import "shobjidl.idl";
