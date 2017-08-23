@@ -11,11 +11,11 @@ Running the program doesn't instantiate the object - it just OutputDebugString's
 
 When compiled & run with VS2017 v15.2, the correct output is seen:
 ````
-_CRT_USE_BUILTIN_OFFSETOF is defined
+_CRT_USE_BUILTIN_OFFSETOF is not defined
 _MSC_VER = 1910
-Offset of _cx = 256
-offsetof(CSimpleObject, m_size.cx) == 256
-offsetof(CSimpleObject, m_size.cy) == 260
+Offset of _cx = 272
+offsetof(CSimpleObject, m_size.cx) == 272
+offsetof(CSimpleObject, m_size.cy) == 276
 ````
 
 When compiled & run with VS2017 v15.3, the incorrect output is seen:
